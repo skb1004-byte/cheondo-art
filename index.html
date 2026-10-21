@@ -1113,7 +1113,7 @@ function ink(){const c=$("#ink");if(!c)return;const x=c.getContext("2d"),w=c.wid
 render();
 (async()=>{
  if(window.claude?.use){[db,assets,user,AI]=await Promise.all([claude.use("db"),claude.use("assets"),claude.use("user"),claude.use("sample")]);canEdit=(await user?.canEdit?.())??false}
- if(!db&&window.supabase&&/^https?:$/.test(location.protocol)){try{({db,assets}=makeSupa());await sbAuthState();document.body.classList.add("sb");SB.auth.onAuthStateChange(ev=>{if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"){sbAuthState().then(()=>{db.refetch();if(ev==="SIGNED_IN"&&(location.hash===""||/access_token|#admin/.test(location.hash)))location.hash="#admin";render()})}})}catch(x){console.warn("[supabase]",x);db=null;SB=null}}
+ if(!db&&window.supabase&&/^https?:$/.test(location.protocol)){try{({db,assets}=makeSupa());await sbAuthState();document.body.classList.add("sb");SB.auth.onAuthStateChange(ev=>{if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"){sbAuthState().then(()=>{db.refetch();if(ev==="SIGNED_IN"&&(location.hash===""||location.hash==="#"||/access_token|#admin/.test(location.hash)))location.hash="#admin";render()})}})}catch(x){console.warn("[supabase]",x);db=null;SB=null}}
  if(!db){LOCAL=true;Object.assign(FILEURL,Object.fromEntries(Object.entries(await idbAll()).map(([k,v])=>[k,URL.createObjectURL(v)])));({db,assets}=makeLocal());try{canEdit=localStorage.getItem("td-admin")==="1"}catch(x){}}
  $("#adminLink").hidden=!LOCAL&&!canEdit;
  for(const k of ["artworks","certs","news","media","inquiries"]){
