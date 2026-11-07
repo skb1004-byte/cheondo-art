@@ -1,0 +1,158 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>천도예술품국제교류센터 · 전시실 · 시안 B</title><link rel="stylesheet" href="https://xn--hq1b348b.kr/fonts/fonts.css"><link rel="stylesheet" href="https://xn--hq1b348b.kr/fonts/fonts-zh.css"><style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}html,body{overflow-x:clip}body{margin:0}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:50;background:var(--paper);padding:8px 12px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.45s}
+[data-ink]{--r:0%;-webkit-mask:radial-gradient(circle at 30% 40%,#000 var(--r),transparent calc(var(--r) + 18%));mask:radial-gradient(circle at 30% 40%,#000 var(--r),transparent calc(var(--r) + 18%));transition:--r 1.4s cubic-bezier(.2,.7,.2,1)}
+[data-ink].in{--r:160%}
+@property --r{syntax:'<percentage>';inherits:false;initial-value:0%}
+.zoom{position:fixed;inset:0;z-index:100;background:rgba(20,18,15,.92);display:grid;place-items:center;overflow:hidden}
+.zoom img{max-width:92vw;max-height:88vh;cursor:zoom-in;transition:transform .35s}
+.z-x{position:absolute;top:16px;right:16px;background:#fff;border:0;padding:10px 16px;font:inherit;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}[data-ink]{-webkit-mask:none;mask:none}::view-transition-group(*){animation:none!important}}
+
+:root{--paper:#f7f6f2;--paper2:#1f2c4a;--ink:#1a1d24;--ink2:#4a4f5a;--gold:#7d6024;--goldl:#b39350;--seal:#b0362a;--line:#dcdad3;--focus:#1f2c4a;--navy:#1f2c4a;
+ --serif:"Noto Serif KR Variable","Noto Serif KR","Nanum Myeongjo",serif;--sans:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;--han:"Noto Serif TC Variable","Noto Serif KR Variable",serif}
+body{background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.09' numOctaves='3' seed='11'/%3E%3CfeColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.25  0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23p)'/%3E%3C/svg%3E");color:var(--ink);font:400 16px/1.75 var(--sans);letter-spacing:-.005em;word-break:keep-all;overflow-wrap:anywhere}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;margin:0}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand img{height:42px;width:auto;mix-blend-mode:multiply}.brand b{font:600 17px/1.2 var(--serif);letter-spacing:-.03em}.brand small{display:block;font:400 11px var(--han);color:var(--ink2);letter-spacing:.12em}
+nav.m{display:flex;gap:22px;margin-left:auto;font-size:14.5px}nav.m a{text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}nav.m a:hover,nav.m a[aria-current]{border-color:var(--seal)}
+.lg{display:flex;gap:2px;font-size:12.5px}.lg button{border:1px solid var(--line);background:none;padding:5px 8px;font:inherit;color:var(--ink2)}.lg button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* hero: 도록 펼침면 */
+.hero{display:grid;grid-template-columns:96px minmax(0,1.15fr) minmax(0,1fr);gap:0 clamp(20px,4vw,64px);padding:clamp(32px,6vw,88px) 0 40px;align-items:end;min-height:min(86vh,860px)}
+.vcol{align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:space-between;border-right:1px solid var(--line);padding-right:28px}
+.vcol .v{writing-mode:vertical-rl;font:300 clamp(64px,7vw,104px)/1 var(--han);letter-spacing:.18em;color:var(--ink)}
+.vcol .vs{writing-mode:vertical-rl;font:400 13px/1 var(--han);letter-spacing:.4em;color:var(--ink2)}
+.seal{width:62px;color:var(--seal);transform:rotate(-3deg)}
+.plate{position:relative;align-self:stretch;display:grid;place-items:end center;padding-bottom:30px}
+.plate::before{content:"";position:absolute;inset:6% 4% 0;background:radial-gradient(60% 46% at 50% 54%,#fffaf0 0,rgba(255,250,240,.0) 70%)}
+.plate .shadow{position:absolute;bottom:22px;left:22%;right:22%;height:34px;background:radial-gradient(closest-side,rgba(45,35,20,.38),transparent);filter:blur(4px)}
+.plate img{position:relative;max-height:min(70vh,700px);width:auto;view-transition-name:hero-obj;will-change:transform}
+.cap{font-size:13.5px;color:var(--ink2);line-height:1.6;border-top:1px solid var(--ink);padding-top:10px;max-width:340px}
+.cap b{display:block;font:500 15px/1.5 var(--serif);color:var(--ink)}
+.txt h1{font-size:clamp(32px,3.7vw,56px);line-height:1.22;font-weight:350}
+.txt h1 span{display:block}
+.txt p{font-size:17px;max-width:30em;color:var(--ink2);margin:26px 0 30px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border:1px solid var(--ink);text-decoration:none;font-size:15px;background:var(--ink);color:var(--paper)}
+.btn.o{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--seal);border-color:var(--seal);color:#fff}
+.cloud{display:block;color:var(--goldl);width:150px;margin:0 0 22px}.cloud svg{width:100%;height:auto}
+.inkline{color:var(--ink);height:14px;width:100%;opacity:.85}
+/* 서문 */
+.pre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px);padding:64px 0 90px}
+.pre h2{font-size:clamp(26px,2.6vw,38px);line-height:1.35}
+.pre p{font:400 18px/1.95 var(--serif);color:var(--ink2);margin:0 0 1em;max-width:36em}
+.pre p:first-child::first-letter{float:left;font:400 64px/0.9 var(--serif);margin:6px 10px 0 0;color:var(--seal)}
+/* 전시 도판 13 */
+.plates-h{display:flex;align-items:end;justify-content:space-between;gap:20px;border-bottom:1px solid var(--ink);padding-bottom:14px}
+.plates-h h2{font-size:clamp(28px,3vw,44px)}.plates-h p{margin:0;color:var(--ink2);max-width:30em;font-size:15px}
+.cat{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:56px 28px;padding:48px 0 100px}
+.cat a{text-decoration:none;display:flex;flex-direction:column;gap:12px}
+.cat .ph{background:linear-gradient(#efe7d8,#e6dcc8);aspect-ratio:4/5;display:grid;place-items:center;padding:12%;position:relative;overflow:hidden}
+.cat .ph img{max-height:100%;width:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 18px 18px rgba(40,30,15,.22))}
+.cat a:hover .ph img{transform:scale(1.04)}
+.cat .lab{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:13.5px;color:var(--ink2)}
+.cat .lab i{font:italic 400 22px/1 var(--serif);color:var(--gold);grid-row:span 2}
+.cat .lab b{font:500 15.5px/1.45 var(--serif);color:var(--ink)}
+.cat a:nth-child(1){grid-column:1/6}.cat a:nth-child(2){grid-column:7/10;margin-top:120px}.cat a:nth-child(3){grid-column:10/13}
+.cat a:nth-child(4){grid-column:2/5}.cat a:nth-child(5){grid-column:6/9;margin-top:60px}.cat a:nth-child(6){grid-column:9/13}
+.cat a:nth-child(n+7){grid-column:span 3}
+/* 감정 절차: 타임라인 */
+.flow{background:var(--paper2);padding:90px 0}
+.flow h2{font-size:clamp(26px,2.6vw,38px);margin-bottom:8px}.flow .sub{color:var(--ink2);margin:0 0 44px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:var(--ink);opacity:.8}
+.tl li{position:relative;padding:0 24px 0 0}
+.tl .k{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);font:500 20px var(--serif);position:relative}
+.tl li:last-child .k{background:var(--seal);border-color:var(--seal);color:#fff}
+.tl h3{font-size:21px;margin:18px 0 6px}.tl p{margin:0;color:var(--ink2);font-size:15px}
+.tl small{display:block;margin-top:8px;color:var(--gold);font-size:13px}
+footer.f{border-top:1px solid var(--ink);padding:40px 0 60px;font-size:14px;color:var(--ink2)}
+footer.f .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-between}
+footer.f b{font:500 16px var(--serif);color:var(--ink)}
+/* 전시실 */
+.room-h{padding:56px 0 30px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:24px;border-bottom:1px solid var(--ink)}
+.room-h h1{font-size:clamp(38px,5vw,72px);font-weight:300}
+.room-h p{margin:0;color:var(--ink2);max-width:32em}
+.room{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:40px 28px;padding:44px 0 60px}
+.room a{text-decoration:none}.room a[aria-current=true] .ph{outline:2px solid var(--seal);outline-offset:4px}
+.room .ph{background:linear-gradient(#efe7d8,#e5dac6);aspect-ratio:4/5;display:grid;place-items:center;padding:13%}
+.room .ph img{max-height:100%;width:auto;filter:drop-shadow(0 14px 14px rgba(40,30,15,.2))}
+.room .lab{margin-top:12px;font-size:13.5px;color:var(--ink2)}.room .lab b{display:block;font:500 15px/1.45 var(--serif);color:var(--ink)}
+#detail{border-top:1px solid var(--ink);padding:56px 0 90px}
+.d-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,72px)}
+.d-main{background:radial-gradient(70% 60% at 50% 45%,#fffaf0,#e9dfcc);aspect-ratio:1/1;display:grid;place-items:center;padding:8%;cursor:zoom-in;border:0;width:100%}
+.d-main img{max-height:100%;width:auto;view-transition-name:hero-obj;filter:drop-shadow(0 24px 22px rgba(40,30,15,.25))}
+.d-th{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin-top:12px}
+.d-th button{border:0;padding:0;background:#222;aspect-ratio:3/4;cursor:zoom-in}.d-th img{width:100%;height:100%;object-fit:cover}
+.d-l .pn{font:italic 400 44px/1 var(--serif);color:var(--gold)}
+.d-l h2{font-size:clamp(26px,2.4vw,36px);line-height:1.35;margin:10px 0 22px}
+.d-l dl{display:grid;grid-template-columns:7em 1fr;gap:10px 16px;margin:0 0 26px;border-top:1px solid var(--line);padding-top:16px}.d-l dt{color:var(--ink2)}.d-l dd{margin:0}
+.d-l .note{font-size:13.5px;color:var(--ink2);border-left:3px solid var(--seal);padding-left:12px}
+@media(max-width:1100px){nav.m{display:none}}
+@media(max-width:860px){.hero{grid-template-columns:56px minmax(0,1fr);min-height:0}.vcol{padding-right:14px}.vcol .v{font-size:52px}.seal{width:44px}.plate{grid-column:2;min-height:420px}.txt{grid-column:1/-1;margin-top:28px}
+ .pre,.d-g{grid-template-columns:1fr}.cat{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}.cat a:nth-child(n){grid-column:auto;margin-top:0}
+ .tl{grid-template-columns:1fr;gap:28px}.tl::before{left:27px;right:auto;top:0;bottom:0;width:2px;height:auto}.tl li{padding:0 0 0 76px}.tl .k{position:absolute;left:0;top:0}.tl h3{margin-top:10px}
+ .room-h{grid-template-columns:1fr}.room{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+@media(max-width:520px){.top .wrap{gap:10px;height:62px}.brand{min-width:0}.brand img{height:34px}.brand b{font-size:13px;white-space:nowrap}.brand small{display:none}.lg{margin-left:auto}.lg button{padding:4px 5px;font-size:11px;white-space:nowrap}.plate img{max-height:52vh}}
+@media(max-width:860px){.plates-h{flex-direction:column;align-items:flex-start}}
+@media(max-width:380px){.brand b{display:none}}
+
+body{background:var(--paper)}
+.hero{grid-template-columns:minmax(0,1fr);min-height:0;padding:clamp(28px,4vw,56px) 0 0;text-align:left}
+.hb{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,60px);align-items:end}
+.hb h1{font-size:clamp(44px,6.4vw,104px);line-height:1.04;font-weight:600;letter-spacing:-.045em}
+.hb p{font-size:17px;color:var(--ink2);margin:0 0 26px;max-width:28em}
+.vit{margin-top:clamp(28px,4vw,56px);background:linear-gradient(180deg,#eef0f3 0,#e3e6ea 70%,#d7dbe0 100%);position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto) minmax(0,1fr);align-items:end;padding:56px clamp(16px,4vw,56px) 0;border-top:3px solid var(--navy)}
+.vit .obj{grid-column:2;display:grid;justify-items:center}
+.vit .obj img{max-height:min(66vh,640px);width:auto;view-transition-name:hero-obj;filter:drop-shadow(0 30px 26px rgba(20,28,45,.28))}
+.vit .plinth{width:min(70vw,520px);height:64px;background:linear-gradient(#fbfbfa,#e9e8e3);box-shadow:0 18px 30px rgba(20,28,45,.12);margin-top:-6px}
+.vit .side{grid-column:3;align-self:center;font-size:13.5px;color:var(--ink2);padding-left:28px;border-left:1px solid #b9bec7;max-width:260px}
+.vit .side b{display:block;font:500 16px/1.45 var(--serif);color:var(--ink);margin-bottom:6px}
+.vit .han{grid-column:1;align-self:center;writing-mode:vertical-rl;font:300 clamp(48px,6vw,92px)/1 var(--han);letter-spacing:.2em;color:#9aa3b2;justify-self:start}
+.vit .seal{position:absolute;right:clamp(16px,4vw,56px);top:24px;width:54px}
+.walk{padding:90px 0}
+.walk .plates-h{border-color:var(--navy)}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,22%);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px 0 20px;scrollbar-color:var(--navy) transparent}
+.strip a{scroll-snap-align:start;text-decoration:none}
+.strip .ph{background:linear-gradient(180deg,#eef0f3,#dfe3e8);aspect-ratio:3/4;display:grid;place-items:center;padding:14%;border-bottom:3px solid var(--navy)}
+.strip .ph img{max-height:100%;width:auto;filter:drop-shadow(0 16px 14px rgba(20,28,45,.22));transition:transform .6s}
+.strip a:hover img{transform:translateY(-6px)}
+.strip .lab{margin-top:12px;font-size:13.5px;color:var(--ink2)}.strip .lab b{display:block;font:500 15px/1.45 var(--serif);color:var(--ink)}
+.flow{color:#eef0f4}.flow h2,.flow h3{color:#fff}.flow .sub,.flow .tl p{color:#c9d0dc}.flow .tl::before{background:#c9a65e}.flow .tl .k{background:var(--navy);border-color:#c9a65e;color:#fff}.flow .tl small{color:#d9bd7e}
+.room .ph,.d-main{background:linear-gradient(180deg,#eef0f3,#dfe3e8)}
+.room .ph{border-bottom:3px solid var(--navy)}
+.btn:hover{background:var(--navy);border-color:var(--navy)}
+@media(max-width:860px){.hb{grid-template-columns:1fr}.vit{grid-template-columns:1fr;padding-top:40px}.vit .obj{grid-column:1}.vit .han{display:none}.vit .side{grid-column:1;border-left:0;border-top:1px solid #b9bec7;padding:16px 0 24px;max-width:none}.strip{grid-auto-columns:72%}}
+</style></head><body><a class="skip" href="#main">본문 바로가기</a><header class="top"><div class="wrap"><a class="brand" href="home.html"><img src="../../img/g/logo.webp" alt="천도예술품국제교류센터 로고" width="84" height="42"><span><b>천도예술품국제교류센터</b><small>天道藝術品國際交流中心</small></span></a><nav class="m" aria-label="주 메뉴"><a href="room.html" aria-current="page">소장품</a><a href="#">감정</a><a href="#">인증 조회</a><a href="#">위탁·판매</a><a href="#">디지털 자산</a><a href="#">소식·행사</a><a href="#">센터 소개</a><a href="#">문의</a></nav><div class="lg" role="group" aria-label="언어"><button aria-pressed="true">한국어</button><button aria-pressed="false">EN</button><button aria-pressed="false">中文</button><button aria-pressed="false">日本語</button></div></div></header><main id="main"><div class="wrap">
+<div class="room-h"><h1>전시실</h1><p>위탁 소장품 13점. 유물을 고르면 아래에 상세 사진과 감정 자료가 열립니다. 사진을 누르면 확대해 볼 수 있습니다.</p></div>
+<div class="room"><a href="#cs01" data-open="cs01" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c01_1.webp" alt="명 만력 백자능화창청화수초화어문 연청채초화문 누공개호"></div><div class="lab"><b>명 만력 백자능화창청화수초화어문 연청채초화문 누공개호</b>명 · 만력</div></a><a href="#cs02" data-open="cs02" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c02_1.webp" alt="청 건륭 백자은지묘금청화연화문 유개완탁"></div><div class="lab"><b>청 건륭 백자은지묘금청화연화문 유개완탁</b>청 · 건륭</div></a><a href="#cs03" data-open="cs03" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c03_1.webp" alt="명 영락 백자황지청화길상초화운룡문 집호"></div><div class="lab"><b>명 영락 백자황지청화길상초화운룡문 집호</b>명 · 영락</div></a><a href="#cs04" data-open="cs04" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c04_10.webp" alt="청 건륭 청금석지묘금법랑채화과문 작탁"></div><div class="lab"><b>청 건륭 청금석지묘금법랑채화과문 작탁</b>청 · 건륭</div></a><a href="#cs05" data-open="cs05" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c05_3.webp" alt="백자묘금법랑채화접문 화형잔탁"></div><div class="lab"><b>백자묘금법랑채화접문 화형잔탁</b>시대 미상</div></a><a href="#cs06" data-open="cs06" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c06_4.webp" alt="명 선덕 백자청화유리홍채 기하파도운룡봉황문 고족완"></div><div class="lab"><b>명 선덕 백자청화유리홍채 기하파도운룡봉황문 고족완</b>명 · 선덕</div></a><a href="#cs07" data-open="cs07" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c07_1.webp" alt="명 만력 황지홍화청금석채화룡문 관"></div><div class="lab"><b>명 만력 황지홍화청금석채화룡문 관</b>명 · 만력</div></a><a href="#cs08" data-open="cs08" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c08_1.webp" alt="청 옹정 백자황지묘금분채천서길상연화문 집호"></div><div class="lab"><b>청 옹정 백자황지묘금분채천서길상연화문 집호</b>청 · 옹정</div></a><a href="#cs09" data-open="cs09" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c09_1.webp" alt="원 청화백자어조문 호"></div><div class="lab"><b>원 청화백자어조문 호</b>원</div></a><a href="#cs10" data-open="cs10" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c10_8.webp" alt="청 건륭 황지청화초화길상파도문 팔각준"></div><div class="lab"><b>청 건륭 황지청화초화길상파도문 팔각준</b>청 · 건륭</div></a><a href="#cs11" data-open="cs11" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c11_1.webp" alt="영청백자각화겹화엽문 두립완"></div><div class="lab"><b>영청백자각화겹화엽문 두립완</b>시대 미상</div></a><a href="#cs12" data-open="cs12" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c12_1.webp" alt="여요 나전상감맹수운봉 추병"></div><div class="lab"><b>여요 나전상감맹수운봉 추병</b>여요</div></a><a href="#cs13" data-open="cs13" aria-current="false"><div class="ph"><img loading="lazy" src="../../img/g/c13_1.webp" alt="고동채 금은묘금 기하길상문 양이준"></div><div class="lab"><b>고동채 금은묘금 기하길상문 양이준</b>시대 미상</div></a></div>
+<section id="detail" aria-live="polite"><div class="d-g"><div><button type="button" class="d-main" aria-label="대표 사진 확대"><img src="../../img/g/c07_1.webp" alt="명 만력 황지홍화청금석채화룡문 관"></button><div class="d-th"><button type="button" aria-label="사진 1 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_1.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_1.webp" alt=""></button><button type="button" aria-label="사진 2 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_2.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_2.webp" alt=""></button><button type="button" aria-label="사진 3 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_3.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_3.webp" alt=""></button><button type="button" aria-label="사진 4 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_4.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_4.webp" alt=""></button><button type="button" aria-label="사진 5 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_5.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_5.webp" alt=""></button><button type="button" aria-label="사진 6 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_9.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_9.webp" alt=""></button><button type="button" aria-label="사진 7 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_10.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_10.webp" alt=""></button><button type="button" aria-label="사진 8 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_11.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_11.webp" alt=""></button><button type="button" aria-label="사진 9 크게 보기" data-z="https://xn--hq1b348b.kr/img/c07_12.webp"><img loading="lazy" src="https://xn--hq1b348b.kr/img/c07_12.webp" alt=""></button></div></div>
+<div class="d-l"><span class="pn" data-f="n">07</span><h2 data-f="t">명 만력 황지홍화청금석채화룡문 관</h2><dl><dt>시대</dt><dd data-f="era">명 · 만력</dd><dt>크기</dt><dd data-f="size">높이 32.5cm · 구경 18.5cm · 저경 21.5cm</dd><dt>아카이브</dt><dd data-f="no">CSB00007</dd><dt>감정 자료</dt><dd><span data-f="docs">11</span>건 (감정서 원본·검사 기록)</dd></dl>
+<p class="note">대표 사진은 배경만 정리했고, 아래 상세 사진은 촬영 원본입니다. 감정 자료는 진위와 가치를 보장하지 않는 참고 자료입니다.</p>
+<div class="btns" style="margin-top:22px"><a class="btn" href="#">이 유물 위탁 상담</a><a class="btn o" href="#">인증 조회</a></div></div></div></section>
+</div></main><footer class="f"><div class="wrap"><div><b>(주)천도예술품국제교류센터</b><br>서울특별시 서대문구 남가좌동 382-6, DMC 빌딩 1~2층</div><div>대표전화 02-303-7877<br>회장 장유성 010-8606-1141<br>jus1141@naver.com</div></div></footer><script>addEventListener("load",()=>{const h=location.hash.slice(1);if(h&&ITEMS.find(i=>i.id===h))showItem(h)})</script><script>const ITEMS=[{"id": "cs01", "t": "명 만력 백자능화창청화수초화어문 연청채초화문 누공개호", "era": "명 · 만력", "size": "높이 25cm · 구경 10cm · 저경 13cm", "no": "CSB00001", "ph": ["c01_1", "c01_2", "c01_3", "c01_4", "c01_5", "c01_6", "c01_7"], "docs": 12, "n": 1}, {"id": "cs02", "t": "청 건륭 백자은지묘금청화연화문 유개완탁", "era": "청 · 건륭", "size": "높이 6.5cm · 구경 19cm", "no": "CSB00002", "ph": ["c02_1", "c02_2", "c02_3"], "docs": 11, "n": 2}, {"id": "cs03", "t": "명 영락 백자황지청화길상초화운룡문 집호", "era": "명 · 영락", "size": "높이 48cm · 구경 17cm · 저경 19cm", "no": "CSB00003", "ph": ["c03_1", "c03_2", "c03_3", "c03_4", "c03_5", "c03_6", "c03_7", "c03_8"], "docs": 12, "n": 3}, {"id": "cs04", "t": "청 건륭 청금석지묘금법랑채화과문 작탁", "era": "청 · 건륭", "size": "높이 17cm · 구경 12cm · 저경 17cm", "no": "CSB00004", "ph": ["c04_10", "c04_1", "c04_2", "c04_3", "c04_4", "c04_5", "c04_6", "c04_11", "c04_12", "c04_13", "c04_14", "c04_15", "c04_16"], "docs": 12, "n": 4}, {"id": "cs05", "t": "백자묘금법랑채화접문 화형잔탁", "era": "시대 미상", "size": "높이 6.5cm · 구경 19cm", "no": "CSB00005", "ph": ["c05_3", "c05_1", "c05_2", "c05_4"], "docs": 12, "n": 5}, {"id": "cs06", "t": "명 선덕 백자청화유리홍채 기하파도운룡봉황문 고족완", "era": "명 · 선덕", "size": "높이 16.3cm · 구경 25.8cm · 저경 8cm", "no": "CSB00006", "ph": ["c06_4", "c06_5", "c06_6", "c06_7", "c06_8", "c06_9", "c06_10"], "docs": 11, "n": 6}, {"id": "cs07", "t": "명 만력 황지홍화청금석채화룡문 관", "era": "명 · 만력", "size": "높이 32.5cm · 구경 18.5cm · 저경 21.5cm", "no": "CSB00007", "ph": ["c07_1", "c07_2", "c07_3", "c07_4", "c07_5", "c07_9", "c07_10", "c07_11", "c07_12"], "docs": 11, "n": 7}, {"id": "cs08", "t": "청 옹정 백자황지묘금분채천서길상연화문 집호", "era": "청 · 옹정", "size": "높이 11.5cm · 구경 16.5cm · 저경 6.5cm", "no": "CSB00008", "ph": ["c08_1", "c08_2", "c08_3", "c08_4", "c08_5", "c08_6"], "docs": 11, "n": 8}, {"id": "cs09", "t": "원 청화백자어조문 호", "era": "원", "size": "높이 28cm · 구경 3.5cm · 저경 7.5cm", "no": "CSB00009", "ph": ["c09_1", "c09_2", "c09_3", "c09_4"], "docs": 6, "n": 9}, {"id": "cs10", "t": "청 건륭 황지청화초화길상파도문 팔각준", "era": "청 · 건륭", "size": "높이 48cm · 구경 17cm · 저경 19cm", "no": "CSB00010", "ph": ["c10_8", "c10_4", "c10_5", "c10_6", "c10_7"], "docs": 12, "n": 10}, {"id": "cs11", "t": "영청백자각화겹화엽문 두립완", "era": "시대 미상", "size": "높이 6.5cm · 구경 20cm · 저경 5.5cm", "no": "CSB00011", "ph": ["c11_1", "c11_2", "c11_3", "c11_4", "c11_5", "c11_6", "c11_7"], "docs": 10, "n": 11}, {"id": "cs12", "t": "여요 나전상감맹수운봉 추병", "era": "여요", "size": "높이 25.5cm · 구경 8cm · 저경 11.5cm", "no": "CSB00012", "ph": ["c12_1", "c12_2", "c12_3", "c12_4", "c12_5", "c12_6", "c12_7"], "docs": 12, "n": 12}, {"id": "cs13", "t": "고동채 금은묘금 기하길상문 양이준", "era": "시대 미상", "size": "높이 45cm · 구경 12cm · 저경 15cm", "no": "CSB00013", "ph": ["c13_1", "c13_2", "c13_3", "c13_4", "c13_5", "c13_6", "c13_7", "c13_8"], "docs": 12, "n": 13}];</script><script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.18});
+document.querySelectorAll('[data-ink]').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+if(!RM){const ps=[...document.querySelectorAll('[data-par]')];let t=0;addEventListener('scroll',()=>{if(t)return;t=requestAnimationFrame(()=>{t=0;ps.forEach(p=>{const r=p.getBoundingClientRect();const k=(r.top+r.height/2-innerHeight/2)/innerHeight;p.style.transform=`translate3d(0,${(k*-18).toFixed(1)}px,0) scale(${(1.02-Math.abs(k)*.02).toFixed(3)})`})})},{passive:true})}
+const vt=f=>document.startViewTransition&&!RM?document.startViewTransition(f):f();
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();const id=b.dataset.open;vt(()=>showItem(id))}));
+function showItem(id){const x=ITEMS.find(i=>i.id===id);const d=document.getElementById('detail');if(!x||!d)return;
+ d.querySelector('[data-f=t]').textContent=x.t;d.querySelector('[data-f=era]').textContent=x.era;d.querySelector('[data-f=size]').textContent=x.size;d.querySelector('[data-f=no]').textContent=x.no;d.querySelector('[data-f=n]').textContent=String(x.n).padStart(2,'0');d.querySelector('[data-f=docs]').textContent=x.docs;
+ const m=d.querySelector('.d-main img');m.src='../../img/g/'+x.ph[0]+'.webp';m.alt=x.t;
+ d.querySelector('.d-th').innerHTML=x.ph.map((k,i)=>`<button type="button" aria-label="사진 ${i+1} 크게 보기" data-z="${LIVE}img/${k}.webp"><img loading="lazy" src="${LIVE}img/${k}.webp" alt=""></button>`).join('');
+ document.querySelectorAll('.room [data-open]').forEach(c=>c.setAttribute('aria-current',c.dataset.open===id?'true':'false'));
+ d.hidden=false;d.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}
+const LIVE="https://xn--hq1b348b.kr/";
+document.addEventListener('click',e=>{const z=e.target.closest('[data-z],.d-main');if(!z)return;const src=z.dataset.z||z.querySelector('img').src;const o=document.createElement('div');o.className='zoom';o.setAttribute('role','dialog');o.setAttribute('aria-label','확대 보기');o.innerHTML=`<img src="${src}" alt=""><button type="button" class="z-x" aria-label="닫기">닫기</button>`;document.body.append(o);const im=o.querySelector('img');let on=false;
+ im.addEventListener('click',ev=>{on=!on;const r=im.getBoundingClientRect();im.style.transformOrigin=`${(ev.clientX-r.left)/r.width*100}% ${(ev.clientY-r.top)/r.height*100}%`;im.style.transform=on?'scale(2.2)':'none'});
+ const close=()=>{o.remove();z.focus&&z.focus()};o.querySelector('.z-x').onclick=close;o.addEventListener('keydown',ev=>{if(ev.key==='Escape')close()});o.tabIndex=-1;o.querySelector('.z-x').focus()});
+</script></body></html>
