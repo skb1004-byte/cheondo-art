@@ -962,7 +962,7 @@ function makeSupa(){
   const {error}=await SB.storage.from(bucket).upload(path,f,{contentType:f.type||undefined,upsert:false});if(error)throw error;return{id:"sb:"+bucket+"/"+path}}};
  return{db,assets};
 }
-async function sbAuthState(){const {data:{session}}=await SB.auth.getSession();SB_EMAIL=session?.user?.email||"";SB_ADMIN=false;
+async function sbAuthState(){const {data:{session}}=await SB.auth.getSession();SB_EMAIL=session?.user?.email||"";SB_ADMIN=false;window.SB_FRESH=!!session&&(Date.now()-Date.parse(session.user?.last_sign_in_at||0))<180000;
  if(session){const {data}=await SB.from("admins").select("email").limit(1);SB_ADMIN=!!(data&&data.length)}canEdit=SB_ADMIN;document.body.classList.toggle("sb-admin",SB_ADMIN)}
 async function signInbox(){if(!SB_ADMIN)return;const ids=[...new Set(DATA.inquiries.flatMap(x=>[...(x.photos||[]),...(x.docs||[])]).filter(i=>String(i).startsWith("sb:inbox/")&&!FILEURL[i]))];if(!ids.length)return;
  const {data,error}=await SB.storage.from("inbox").createSignedUrls(ids.map(i=>i.slice(9)),3600);if(error||!data)return;data.forEach((r,n)=>{if(r.signedUrl)FILEURL[ids[n]]=r.signedUrl});if(location.hash==="#admin")adminPane()}
@@ -1337,7 +1337,7 @@ render();
 (async()=>{
  if(window.claude?.use){[db,assets,user,AI]=await Promise.all([claude.use("db"),claude.use("assets"),claude.use("user"),claude.use("sample")]);canEdit=(await user?.canEdit?.())??false}
  if(!db&&!window.supabase&&/^https?:$/.test(location.protocol))await new Promise(r=>{const sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js";sc.onload=sc.onerror=r;document.head.appendChild(sc)});
- if(!db&&window.supabase&&/^https?:$/.test(location.protocol)){try{({db,assets}=makeSupa());await sbAuthState();document.body.classList.add("sb");SB.auth.onAuthStateChange(ev=>{if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"){sbAuthState().then(()=>{db.refetch();if(ev==="SIGNED_IN"&&(location.hash===""||location.hash==="#"||/access_token|#admin/.test(location.hash)))location.hash="#admin";render()})}})}catch(x){console.warn("[supabase]",x);db=null;SB=null}}
+ if(!db&&window.supabase&&/^https?:$/.test(location.protocol)){try{({db,assets}=makeSupa());await sbAuthState();if(SB_ADMIN&&window.SB_FRESH&&(location.hash===""||location.hash==="#"||/access_token/.test(location.hash))){location.hash="#admin"}document.body.classList.add("sb");SB.auth.onAuthStateChange(ev=>{if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"){sbAuthState().then(()=>{db.refetch();if(ev==="SIGNED_IN"&&(location.hash===""||location.hash==="#"||/access_token|#admin/.test(location.hash)))location.hash="#admin";render()})}})}catch(x){console.warn("[supabase]",x);db=null;SB=null}}
  if(!db){LOCAL=true;Object.assign(FILEURL,Object.fromEntries(Object.entries(await idbAll()).map(([k,v])=>[k,URL.createObjectURL(v)])));({db,assets}=makeLocal());try{canEdit=localStorage.getItem("td-admin")==="1"}catch(x){}}
  $("#adminLink").hidden=!LOCAL&&!canEdit;
  for(const k of ["artworks","certs","news","media","inquiries"]){
