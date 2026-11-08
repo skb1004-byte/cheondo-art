@@ -1418,5 +1418,8 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
 </script><script id="d3fix6js">
 const LBW={"(주)천도예술품국제교류센터":"(주)<br>천도예술품<wbr>국제교류센터","천도예술품국제교류센터":"천도예술품<wbr>국제교류센터"};
 function lbFix(){if(document.documentElement.lang!=="ko")return;document.querySelectorAll("#app h1,#app h2,#app h3").forEach(e=>{const t=e.textContent.trim();if(e.children.length===0&&LBW[t])e.innerHTML=LBW[t]})}
-lbFix();
+const LBT=["백자","청자","황지","금석지","청화","분채","법랑채","묘금","오채","두채","능화창","수초","화어문","어문","길상","초화","운룡문","천서","연화문","연청채","누공","개호","집호","작탁"];
+function lbArt(){if(document.documentElement.lang!=="ko")return;document.querySelectorAll("#app .card h3,#app .st-l b,#app .dh-cap b").forEach(e=>{if(e.children.length||e.dataset.lb)return;e.dataset.lb=1;e.innerHTML=e.textContent.split(" ").map(w=>{if(w.length<9)return w;let o="";for(let i=0;i<w.length;){const t=LBT.find(k=>w.startsWith(k,i));if(t){o+=(o?"<wbr>":"")+t;i+=t.length}else{o+=w[i];i++}}return o}).join(" ")})}
+lbFix();lbArt();
+const _lbf=lbFix;lbFix=function(){_lbf();lbArt()};
 </script>
