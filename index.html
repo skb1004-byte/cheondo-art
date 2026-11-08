@@ -668,6 +668,11 @@ html:not([lang^=zh]) .cn-body{word-break:keep-all}
 .fpick:hover{background:var(--paper2)}.fpick:focus-within{outline:2px solid var(--gilt);outline-offset:2px}
 /* 8 전경 사진 자리 */
 .ofc-g img{background:var(--paper2);content-visibility:visible}
+</style><style id="d3fix6">
+.kg-t span{background:none!important;flex-wrap:wrap;row-gap:2px}
+.kg-t b{white-space:nowrap;word-break:keep-all}
+.kg-t i{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media(max-width:480px){.kg-t i{display:none}.kg-t b{font-size:17px!important}}
 </style>
 
 <a class="skip" href="#" onclick="var a=document.getElementById('app');a.tabIndex=-1;a.focus();return false">본문 바로가기</a><header><div class="wrap hbar">
@@ -1289,7 +1294,7 @@ function render(){
  document.body.classList.toggle("is-home",r==="home");document.body.classList.toggle("no-fab",r==="admin"||r==="verify");
  if(r==="admin")adminPane();
  if(deep&&$("#vno")){$("#vno").value=deep;$("#vf").requestSubmit()}
- window.fpick&&fpick();translate();inkUp();
+ window.fpick&&fpick();translate();window.lbFix&&lbFix();inkUp();
  if(anc)setTimeout(()=>{const t=document.getElementById(anc);if(t)t.scrollIntoView({behavior:"smooth",block:"start"})},80);
 }
 window.addEventListener("hashchange",()=>{document.startViewTransition&&!RMQ.matches?document.startViewTransition(render):render()});
@@ -1410,4 +1415,8 @@ render();
 function fpick(){document.querySelectorAll('#app input[type=file]:not([hidden]):not(.dropin):not(.fpx)').forEach(i=>{i.classList.add("fpx");const l=document.createElement("label");l.className="fpick";i.parentNode.insertBefore(l,i);l.appendChild(i);const b=document.createElement("span");b.className="fbtn";b.textContent="파일 선택";const n=document.createElement("span");n.className="fname";n.textContent="선택된 파일 없음";l.append(b,n);i.addEventListener("change",()=>{const f=[...i.files];n.textContent=f.length?(f.length>1?f[0].name+" +"+(f.length-1):f[0].name):tt("선택된 파일 없음")})})}
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("#trkm");if(b){const g=document.querySelector(".trk");if(g)g.classList.add("all");b.parentNode.remove()}});
 (()=>{let r=0;const f=()=>{r=0;document.documentElement.classList.toggle("past1",scrollY>innerHeight*.55)};addEventListener("scroll",()=>{if(!r){r=1;requestAnimationFrame(f)}},{passive:true});addEventListener("hashchange",()=>setTimeout(f,60))})();fpick();
+</script><script id="d3fix6js">
+const LBW={"(주)천도예술품국제교류센터":"(주)<br>천도예술품<wbr>국제교류센터","천도예술품국제교류센터":"천도예술품<wbr>국제교류센터"};
+function lbFix(){if(document.documentElement.lang!=="ko")return;document.querySelectorAll("#app h1,#app h2,#app h3").forEach(e=>{const t=e.textContent.trim();if(e.children.length===0&&LBW[t])e.innerHTML=LBW[t]})}
+lbFix();
 </script>
