@@ -1575,4 +1575,4 @@ function mxAdmin(){if(typeof aTab==="undefined"||aTab!=="media")return;const p=d
   if(o.on&&!ytid(o.url)){toast("라이브 영상 주소(유튜브 링크)를 확인해 주세요");return}
   try{await db.doc("media/live-settings").set(o);toast("라이브 설정을 저장했습니다")}catch(x){toast("저장하지 못했습니다: "+(x.message||x.code))}},true)}
 if(typeof adminPane==="function"){const _ap=adminPane;adminPane=function(){_ap.apply(this,arguments);try{mxAdmin()}catch(e){console.warn(e)}}}
-</script>
+</script><script id="mx-scroll">(()=>{const go=()=>{if(location.hash!=="#media")return;const t=document.getElementById("media-sec");if(t)t.scrollIntoView({block:"start"})};const run=()=>{[350,900,1800].forEach(ms=>setTimeout(go,ms))};addEventListener("hashchange",run);if(location.hash==="#media")run()})();</script>
